@@ -79,4 +79,6 @@ origin 이라는 별칭의 원격 저장소에 있는 main 브랜치 내용을 �
 이걸 해주면 로컬이 최신 상태가 되기 때문에 git push가 가능해진다.
 변동사항이 생겼다면 꼭 이것을 하고 나서 git push를 해야된다.
 
-git pull
+git pull origin main
+
+리모트 토큰 확인
