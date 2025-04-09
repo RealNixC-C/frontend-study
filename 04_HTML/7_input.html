@@ -25,7 +25,7 @@
   
   <!-- 값을 미리 입력 -->
   <input type="text" value="NixC">
-
+  
   <!-- 입력할 값의 힌트 -->
   <input type="text" placeholder="이름을 입력하세요!">
   <!-- Tip! 포커스 시 사라지는 힌트 -->
@@ -35,6 +35,8 @@
   <input type="text" value="disabled 테스트" disabled>
   <!-- (참고) 읽기 전용: 수정 불가, Tab키로 선택(focus) 가능, submit 가능-->
   <input type="text" value="readonly 테스트" readonly>
+
+  <!-- hr(horizontal rule) 웹창에 수평 선 을 하나 그어줌 -->
 
   <hr>
 
@@ -70,7 +72,7 @@
       label 사용 이점(웹 접근성과 관련)
       1. 매우 작은 영역(예: 확인란)을 클릭하는 데 어려움이 있는 사용자
       - 사용자가 요소 내의 텍스트를 클릭하면 <label>입력이 토글되기 때문(히트 영역이 증가함)
-        2. 스크린 리더 사용자(사용자가 요소에 초점을 맞추면 레이블을 소리내어 읽음)
+      2. 스크린 리더 사용자(사용자가 요소에 초점을 맞추면 레이블을 소리내어 읽음)
         -->
         
         <!-- 값을 미리 체크 -->
@@ -83,7 +85,7 @@
         
         <hr>
         
-        <!-- 라디오 버튼 -->
+        <!-- 라디오 버튼 (아무설정은 하지 않았으므로 둘 다 체크됨)-->
         <label>
           <input type="radio"> Apple
         </label>
@@ -93,7 +95,7 @@
         
         <br>
         
-        <!-- name 속성으로 그룹화 -->
+        <!-- name 속성으로 그룹화** -->
         <!-- 체크박스는 중복 선택이 가능, 라디오 버튼은 그룹당 한 개만 선택가능 -->
         <label>
           <input type="radio" name="fruits" checked> Apple
@@ -110,7 +112,7 @@
 
         <button type="button">닫기</button>
         <!-- button 태그의 장점
-         요소 내부에 텍스트 뿐만 아니라 다른 태그를 넣을 수 있음 -->
+        요소 내부에 텍스트 뿐만 아니라 다른 태그를 넣을 수 있음 -->
         <button type="button">
           <b>닫기</b><br>
           테스트
@@ -119,6 +121,7 @@
         <hr>
 
         <!-- 색상 선택도구(Color Picker) -->
+        <!-- value 값을 넣으면 초기 색상 지정 가능. 없을시 디폴트값#000000 -->
         <label for="favcolor">색상 선택:</label>
         <input type="color" id="favcolor" value="#ff0000">
         
@@ -192,7 +195,7 @@
         </p>
         <textarea id="multi" cols="30" rows="6"></textarea>
         <br>
-        <textarea id="multi" cols="30" rows="6" spellcheck="false"></textarea >
+        <textarea id="multi" cols="30" rows="6" spellcheck="false"></textarea>
         <br>
         <textarea id="multi" cols="30" rows="6" style="resize: none;"></textarea>
 
