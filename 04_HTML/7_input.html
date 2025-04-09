@@ -166,6 +166,12 @@
 
         <hr>
 
+        <!-- 셀렉트 박스(콤보 박스) -->
+        <!-- 속성
+         value: 서버로 전송되는 선택한 항목의 실제값
+         selected: 항목을 미리 선택
+        -->
+
         <label for="cars">차량 선택:</label>
         <select id="cars">
           <option value="">선택</option>
@@ -173,5 +179,42 @@
           <option value="Benz">Benz</option>
           <option value="Audi" selected>Audi</option>
         </select>
+
+        <hr>
+
+        <!-- 여러 줄 입력 -->
+        <!-- cols(가로), rows(세로) -->
+        <!-- spellcheck="false" = 스펠링 밑에 빨간줄 없애기 -->
+        <!-- style="resize: none; (우측 하단 사이즈 조절 탭 삭제) -->
+        <!-- id는 중복되면 안되지만 연습문장이기때문에 패스 -->
+        <p>
+          <label for="multi">여러 줄 텍스트 입력:</label>
+        </p>
+        <textarea id="multi" cols="30" rows="6"></textarea>
+        <br>
+        <textarea id="multi" cols="30" rows="6" spellcheck="false"></textarea >
+        <br>
+        <textarea id="multi" cols="30" rows="6" style="resize: none;"></textarea>
+
+        <hr>
+
+        <!-- form(동기식): 사용자가 작성한 내용을 서버로 전송, 어떤 서버 경로로, 어떤 방식(GET, POST)으로 전달할지 설정 -->
+        <!-- method 생략시 default값 get -->
+        <!-- get 공개된 url 개방성이있어서 보안성은 떨어진다. 데이터검색용 -->
+        <!-- http://127.0.0.1:5500/login?id=111&pw=222 -->
+        <form action="/login" method="get">
+          <input type="text" name="id">
+          <input type="password" name="pw">
+          <button type="submit">로그인</button>
+        </form>
+        
+        <!-- post 보안성이 뛰어난 request에 넣어보내는 방식 url에 노출 없음. ex)아이디 비밀번호 로그인 -->
+        <!-- http://127.0.0.1:5500/login -->
+        <form action="/login" method="post">
+          <input type="text" name="id">
+          <input type="password" name="pw">
+          <button type="submit">로그인</button>
+        </form>
+        
       </body>
       </html>
