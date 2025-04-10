@@ -214,6 +214,7 @@
         <!-- post 보안성이 뛰어난 request에 넣어보내는 방식 url에 노출 없음. ex)아이디 비밀번호 로그인 -->
         <!-- http://127.0.0.1:5500/login -->
         <form action="/login" method="post">
+          <!-- name 속성 : 서버로 전달할 때 유니크하게 구분하기 위한 이름(동기식에만 사용) -->
           <input type="text" name="id">
           <input type="password" name="pw">
           <button type="submit">로그인</button>

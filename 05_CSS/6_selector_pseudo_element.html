@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 가상 요소 선택자: HTML에 가상의 요소를 생성 또는 제어 가능 */
+    /* 
+      ::before, ::after 사용 시
+      반드시 CSS의 content 속성과 같이 사용
+    */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    /* ::before (요소의 내부 앞에 내용 삽입) */
+    /* .box::before {
+      content: "앞!";
+    } */
+    
+    /* ::after (요소의 내부 앞에 내용 삽입) */
+    /* .box::after {
+      content: "뒤!";
+    } */
+    /* 꼭 텍스트가 아니어도 됨! Vertcal bar같은걸 추가가능
+      근데 content 속성은 ""로 값을 비우더라도 필수 작성
+    */
+    /* ::before, ::after 가상 요소는 인라인 요소(글자) */
+    .box::after {
+      content: ""; /* 필수 속성 */
+      width: 10px;
+      height: 30px;
+      background-color: royalblue;
+      /* 인라인 요소이기 때문에 가로/세로 지정이 불가 */
+      display: block;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="box">
+    content
+  </div>
+
+  
+</body>
+</html>
