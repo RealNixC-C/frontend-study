@@ -10,13 +10,14 @@
     /* 각 font 디폴트값 
     font-style = normal
     font-weight = normal(default 400), bold(700) (100~900)
-    font-size = medium default
-    line-height = normal(브라우저의 기본) 
+    font-size = medium(16px)
+    line-height = normal(브라우저의 지원되는 기본) 
     font-family = The default value of the font properties
     
     */
     
     h1.test {
+      /* 글자의 크기*/
       font-size: 16px;
       /* 글자의 두께 */
       font-weight: 400;
@@ -36,17 +37,17 @@
     }
     
     .fst-italic { font-style: italic; }     
-    .fst-weight { font-weight: bold;}
-    .fst-weight900 { font-weight: 900;}
+    .fst-weight { font-weight: bold; }
+    .fst-weight900 { font-weight: 900; } 
     /* 폰트가 해당 두께를 지원해야만 적용됨, 지원하지 않을 경우 가장 가까운 값이 적용됨 */
 
-    .fst-sizelg { font-size: large;}
-    .fst-size150 { font-size: 150%;}
+    .fst-sizelg { font-size: large; }
+    .fst-size150 { font-size: 150%; }
     /* 일반적으로 폰트 크기는 단위(px, em, rem)로 직접 지정 */
 
-    .lh-32px {line-height: 32px;}
-    .lh-2 {line-height: 2;}
-    .lh-200p {line-height: 200%;}
+    .lh-32px { line-height: 32px;} 
+    .lh-2  {line-height: 2; }
+    .lh-200p { line-height: 200%; }
     
     </style>
 
@@ -104,8 +105,8 @@ why? 자주 쓰는 스타일은 재사용 가능한 클래스로 미리 만들�
   <!-- Tip! -->
   <h2>글자 요소(인라인 요소)의 수직 정렬</h2>
   <!-- Quiz -->
-  <div style="height: 80px; background-color: orange; ">
-    <span style="background-color: beige; line-height: 5;" >이것은 문장입니다.</span>
+  <div style="height: 80px; background-color: orange; line-height: 5;">5
+    <span style="background-color: beige; " >이것은 문장입니다.</span>
   </div>
   
 
