@@ -51,7 +51,7 @@
     1. label 요소 내부에 input 요쇼를 배치
     2. for 속성이 input 요소의 id 속성과 같아야 함
     -->
-    <!-- input 요소를 사용할때는 라벨링을해야한다 -->
+    <!-- input 요소를 사용할때는 바인딩을해야한다 -->
     <label>
       <input type="checkbox"> Apple
     </label>
@@ -114,7 +114,7 @@
         <!-- button 태그의 장점
         요소 내부에 텍스트 뿐만 아니라 다른 태그를 넣을 수 있음 -->
         <button type="button">
-          <b>닫기</b><br>
+          <b>닫기</b><br>  <!-- <b> = bold 글씨체를 굵게 -->
           테스트
         </button>
 
@@ -159,7 +159,8 @@
 
         <!-- 범위 선택(기본값: 0~100) -->
         <label for="volume">음량(0~10):</label>
-        <input type="range" id="volume" min="0" max="10" step="2">
+        <input type="range" id="volume" min="0" max="10" step="1">
+        <input type="range" >
 
         <hr>
 
@@ -201,9 +202,9 @@
 
         <hr>
 
-        <!-- form(동기식): 사용자가 작성한 내용을 서버로 전송, 어떤 서버 경로로, 어떤 방식(GET, POST)으로 전달할지 설정 -->
+        <!-- form: 사용자가 작성한 내용을 서버로 전송, 어떤 서버 경로로, 어떤 방식(GET, POST)으로 전달할지 설정 -->
         <!-- method 생략시 default값 get -->
-        <!-- get 공개된 url 개방성이있어서 보안성은 떨어진다. 데이터검색용 -->
+        <!-- get(동기식) 공개된 url 개방성이있어서 보안성은 떨어진다. 데이터검색용 -->
         <!-- http://127.0.0.1:5500/login?id=111&pw=222 -->
         <form action="/login" method="get">
           <input type="text" name="id">
@@ -211,7 +212,7 @@
           <button type="submit">로그인</button>
         </form>
         
-        <!-- post 보안성이 뛰어난 request에 넣어보내는 방식 url에 노출 없음. ex)아이디 비밀번호 로그인 -->
+        <!-- post(비동기식) 보안성이 뛰어난 request에 넣어보내는 방식 url에 노출 없음. ex)아이디 비밀번호 로그인 -->
         <!-- http://127.0.0.1:5500/login -->
         <form action="/login" method="post">
           <!-- name 속성 : 서버로 전달할 때 유니크하게 구분하기 위한 이름(동기식에만 사용) -->
