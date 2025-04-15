@@ -62,8 +62,9 @@
       
       /* 말 줄임표를 만드는 CSS 패턴 */
       white-space: nowrap; /* 줄바꿈 안함 */
-      overflow: hidden; /* 넘친 부분 숨기기 */
+      overflow: hidden;
       text-overflow: ellipsis;  /* 넘쳐서 숨긴 부분을 줄임표로 표시 */
+      /* text-overflow: clip(기본값) */
     }
     
     div.box-multiline {
