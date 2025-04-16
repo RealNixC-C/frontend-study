@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 기본(공통 스타일은 앞부분에 작성) */
+    ul {
+      list-style: none;
+      text-align: center;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    .navbar {
+      display: flex;
+      column-gap: 10px; 
+    }
+    .navbar li {
+      width: 60px;
+      background-color: #ddd;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .navbar li a {
+      font-size: 20px;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .blog-list-item {
+      display: flex;
+    }
+    .blog-content {
+      width: 80%;
+      height: 200px;
+    }
+    .blog-img {
+      width: 20%;
+      height: 200px;
+    }
+    .content-header {
+      display: flex;
+      align-items: center;
+    }
+    .blog-profile {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .blog-name > h3,
+    .blog-name > p {
+      margin: 5px;
+    }
+    .blog-img > img {
+      width: 100%;
+      height: 100%;
+      /* background-size와 동일한 속성. background가 아닌 img 파일에  */
+      object-fit: contain; 
+    }
+  </style>
+
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li>
+        <a href="#">영화</a>
+      </li>
+      <li>
+        <a href="#">맛집</a>
+      </li>
+      <li>
+        <a href="#">IT</a>
+      </li>
+      <li>
+        <a href="#">컴퓨터</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- blog list item -->
+  <div class="container">
+    <div class="blog-list-item">
+      <div class="blog-content">
+        <div class="content-header">
+          <!-- 프로필 이미지 -->
+          <img src="https://picsum.photos/300/400" alt="profile" class="blog-profile">
+          <!-- 작성자, 시간 -->
+          <div class="blog-name">
+            <h3>NixC</h3>
+            <p>5mins ago</p>
+          </div>        
+        </div>
+
+        <div class="content-body">
+          <!-- 글 제목, 글 내용 -->
+          <h4>로렘</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quibusdam voluptas exercitationem vel labore aut modi quisquam esse magni,
+            possimus facere molestias, dolor nihil? Rerum porro quas libero voluptatum nostrum minus.
+          </p>
+        </div>
+      </div>
+      <div class="blog-img">
+        <!-- <img src="https://picsum.photos/300/400" alt="샘플 사진"> -->
+        <img src="https://picsum.photos/400/300" alt="샘플 사진">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
