@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Card</title>
+
+  <style>
+    
+    .img { 
+      width: 500px;
+      height: 350px;
+    }
+
+    .flipcard {
+      /* background-color: transparent; */
+      width: 500px;
+      height: 350px;
+      border: 0px solid #f1f1f1;
+      perspective: 1000px;
+    }
+    .flipcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: 1s;
+      transform-style: preserve-3d;
+
+    }
+    .flipcard:hover .flipcard-inner {
+      transform: rotateY(180deg);
+    }
+    .flipcard-front, .flipcard-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      
+    }
+    .flipcard-front {
+      /* height: 100%;
+      width: 100%; */
+      background-color: #bbb;
+      color: blue;
+      
+    }
+    .flipcard-back {
+      background-color: gold;
+      color: black;
+      transform: rotateY(180deg);
+    }
+  </style>
+
+</head>
+<body>
+  <div class="flipcard">
+    <div class="flipcard-inner">
+      <div class="flipcard-front">
+        <img src="https://d1c5n4ri2guedi.cloudfront.net/card/2090/card_img/21910/2090card.png" alt="앞면" style="width: 500px; height: 350px;">
+      </div>
+      <div class="flipcard-back">
+        <div>
+          <img src="backside.png" alt="뒷면" style="background-size: contain; width: 500px; height: 350px; ">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

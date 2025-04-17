@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    h1 {
+      color: white;
+    }
+    .text-input {
+      width: 50%;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 18px;
+      outline: none;
+    }
+    .text-input:hover {
+      border: 1px solid grey;
+    }
+    .background {
+      width: 100%;
+      height: 1080px;
+      padding: 30px;
+      background-image: url("https://picsum.photos/1920/1080");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      width: 70%;
+      max-width: 600px;
+      min-width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      border: 1px solid grey;
+      border-radius: 7px;
+      box-shadow: 5px 5px 20px 10px cornflowerblue inset;
+      
+      /* position: relative; */
+      
+    }
+    .btn-set {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn {
+      padding: 7px 20px;
+      width: 50%;
+      cursor: pointer;
+    }
+    .pwd-align {
+      position: relative;
+    }
+    span.eye {
+      position: absolute;
+      top: 17%;
+      left: 50%;
+      right: 0;
+    }
+    
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="background">
+    <h1>Login</h1>
+    <div class="container">
+      <p>
+        <label for="id">ID:</label>
+        <input type="text" id="id" class="text-input" placeholder="아이디">
+      </p>
+      <p>
+        <div class="pwd-align">
+          <label for="pwd">PW:</label>
+          <input type="password" id="pwd" class="text-input mark" placeholder="password">
+          <span class="material-symbols-outlined eye">visibility</span>
+        </div>
+      </p>
+      <div class="btn-set">
+        <button type="submit" class="btn">로그인</button>
+        <button type="button" class="btn">회원가입</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

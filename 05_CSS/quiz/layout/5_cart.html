@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- 이미지 크기 50px, item1, item2 -->
-  <!-- th에 width값을주면 나머지 너비 알아서 정렬됨 -->
-  <!-- inner의 max width 700 -->
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 이미지 크기 50px, item1, item2 -->
+    <!-- th에 width값을주면 나머지 너비 알아서 정렬됨 -->
+    <!-- inner의 max width 700 -->
+    
     <style>
       * {
         box-sizing: border-box;
       }
-      table {
-        border-collapse: collapse;
-        width: 70%;
-      }
       .cart-background {
         background-color:lightskyblue;
         padding: 30px;
+        background-image: url("https://picsum.photos/1920/1080");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .img {
         width: 50px;
       }
       .inner {
-        width: 80%;
+        width: 80%; /* 100%, max-width값이 있으므로 80%조절 불필요 */
         max-width: 700px;
-        border-radius: 7px;
+        border-radius: 7px; /* 불필요*/
         margin: 0 auto;
       }
+      table {
+        border-collapse: collapse;
+        /* width: 70%; */
+      }
       .cart-list {
-        border-radius: 10px;
-        background-color: white;
         width: 100%;
+        background-color: white;
+        border-radius: 10px;
         text-align: center;
       }
       .cart-list tr {
         border: 1px solid lightskyblue;
+        /* border-bottom-color: lightskyblue; */
       }
       .cart-list th,
       .cart-list td {
         padding: 10px;
+      }
+      tr {
+        height: 70px;
+      }
+      .tbdy tr:last-child {
+        text-align: right;
+        margin: 5px;
+      }
+      tr :nth-child(2) {
+        width: 350px;
+      }
+      tr td:nth-child(2) {  /* 위와 똑같으니 하나로 합쳐야함 */
+          text-align: left;
       }
       .buy {
         display: flex;
@@ -56,26 +73,14 @@
         font-size: 18px;
         background-color: coral;
         transition: 1s;
+        cursor: pointer;
       }
       .btn:hover {
         background-color: orange;
-        cursor: pointer;
+        /* cursor: pointer; */
       }
-      tr {
-        height: 60px;
-      }
-      .tbdy tr:last-child {
-        text-align: right;
-        margin: 5px;
-      }
-      tr :nth-child(2) {
-        width: 350px;
-      }
-      tr td:nth-child(2) {
-        text-align: left;
-      }
-
-    </style>
+        
+        </style>
 </head>
 <body>
   <div class="cart-background">
