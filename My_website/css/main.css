@@ -1,6 +1,8 @@
+/* https://kimminseoung.github.io/PortFolio/ */
 * {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: #000;
@@ -11,30 +13,68 @@ body {
 .header {
   width: 100%;
   position: fixed;
+  z-index: 10;
 }
 .header .inner {
   max-width: 1300px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 .header .inner .logo a img {
-  width: 40px;
+  width: 60px;
   margin-left: 15px;
 }
 .header .inner .header-menu .menu-list {
   display: flex;
+  background-color: rgba(88, 86, 86, .3);
+  border: none;
+  border-radius: 0 0 15px 15px;
 }
 .header .inner .header-menu .menu-list li {
   padding: 20px;
 }
 .header .inner .header-menu .menu-list li a {
   padding: 10px 20px;
+  color: #fff;
+  font-weight: 550;
+  transition: 0.4s;
 }
 .header .inner .header-menu .menu-list li a:hover {
-  background-color: #0400eb;
-  color: #fff;
+  /* background-color: #0400eb; */
+  color: #191cc2;
   padding: 10px 20px;
 }
-
+.background {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/My_website/image/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background .inner {
+  width: 800px;
+  margin: 0 auto;
+  padding: 200px 45px 0;
+  text-align: center;
+  color: #fff;
+}
+.background .inner .divider {
+  width: 150px;
+  height: 2px;
+  margin: 30px auto;
+}
+.background .inner .intro {
+  font-size: 60px;
+  font-style: italic;
+}
+.background .inner h2 {
+  font-size: 35px;
+}
+.background .inner h2 + h2 {
+  font-size: 35px;
+  margin-top: 50px
+}
