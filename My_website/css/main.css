@@ -87,16 +87,17 @@ body {
   line-height: 75px;
 }
 .about {
-  padding: 150px 0 20px;
+  padding: 150px 0 60px;
 }
 .about .inner {
   display: flex;
+  /* height: 350px; */
   justify-content: space-evenly;
   margin: 150px auto 80px;
 }
 .about .inner .flipcard {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 450px;
   border: none;
   border-radius: 10px;
   perspective: 1000px;
@@ -107,16 +108,16 @@ body {
   position: relative;
   transition: 1s;
   transform-style: preserve-3d;
-  
 }
 .about .inner .flipcard:hover .card_inner {
   transform: rotateY(180deg);
+  
 }
 
 .about .inner .flipcard .card_inner .card_front,
 .about .inner .flipcard .card_inner .card_back {
   width: 100%;
-  height: 300px;
+  height: 100%;
   border-radius: 10px;
   position: absolute;
   display: flex;
@@ -126,9 +127,13 @@ body {
   justify-content: space-evenly;
   backface-visibility: hidden;
   background-color: #303133;
-
+  
   z-index: 2;
 }
+.about .inner .flipcard .card_inner .card_back {
+  transform: rotateY(-180deg);
+}
+
 .about .inner .flipcard .card_inner .card_front img {
   width: 80%;
   display: block;
@@ -136,9 +141,6 @@ body {
 }
 .about .inner .flipcard .card_inner .card_front h2 {
   font-size: 30px;
-}
-.about .inner .flipcard .card_inner .card_back {
-  transform: rotateY(-180deg);
 }
 .learn {
   display: flex;
@@ -168,7 +170,18 @@ body {
   transform: rotate(360deg);
 }
 
-
 .learn .learn__wrapper .learn__img + .learn__img {
   margin-top: 50px;
+}
+
+@keyframes rotate {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes rotate-reverse {
+  0% { transform: rotateY(-180deg); }
+  50% { transform: rotateY(0); }
+  100% { transform: rotateY(-180deg); }
 }
