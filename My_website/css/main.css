@@ -2,18 +2,32 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   color: #000;
 }
 body {
   font-size: 20px;
+  color: #fff;
 }
 .header {
   width: 100%;
   position: fixed;
   z-index: 10;
+}
+.title {
+  color: #303133;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+.divider {
+  width: 380px;
+  height: 2px;
+  margin: 15px auto;
 }
 .header .inner {
   max-width: 1300px;
@@ -39,42 +53,122 @@ body {
 .header .inner .header-menu .menu-list li a {
   padding: 10px 20px;
   color: #fff;
-  font-weight: 550;
+  font-weight: 450;
   transition: 0.4s;
 }
 .header .inner .header-menu .menu-list li a:hover {
-  /* background-color: #0400eb; */
   color: #191cc2;
   padding: 10px 20px;
 }
-.background {
+.intro {
   height: 100vh;
   width: 100%;
   background-image: url("/My_website/image/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-.background .inner {
+.intro .inner {
   width: 800px;
   margin: 0 auto;
   padding: 200px 45px 0;
   text-align: center;
   color: #fff;
 }
-.background .inner .divider {
-  width: 150px;
-  height: 2px;
-  margin: 30px auto;
-}
-.background .inner .intro {
-  font-size: 60px;
+
+.intro .inner .introduce {
+  font-size: 55px;
   font-style: italic;
+  font-weight: 500;
 }
-.background .inner h2 {
+.intro .inner h2 {
   font-size: 35px;
+  line-height: 75px;
 }
-.background .inner h2 + h2 {
-  font-size: 35px;
-  margin-top: 50px
+.about {
+  padding: 150px 0 20px;
+}
+.about .inner {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 150px auto 80px;
+}
+.about .inner .flipcard {
+  width: 200px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  perspective: 1000px;
+}
+.about .inner .flipcard .card_inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+  transform-style: preserve-3d;
+  
+}
+.about .inner .flipcard:hover .card_inner {
+  transform: rotateY(180deg);
+}
+
+.about .inner .flipcard .card_inner .card_front,
+.about .inner .flipcard .card_inner .card_back {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-evenly;
+  backface-visibility: hidden;
+  background-color: #303133;
+
+  z-index: 2;
+}
+.about .inner .flipcard .card_inner .card_front img {
+  width: 80%;
+  display: block;
+  border-radius: 45%;
+}
+.about .inner .flipcard .card_inner .card_front h2 {
+  font-size: 30px;
+}
+.about .inner .flipcard .card_inner .card_back {
+  transform: rotateY(-180deg);
+}
+.learn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 150px 0; */
+  background-color: #b4b7bd;
+  padding: 150px 0 150px;
+}
+.learn .inner {
+  width: 500px
+}
+.learn .title {
+  margin-bottom: 50px;
+}
+.learn h2 {
+  margin: 80px;
+  color: #303133;
+  text-align: center;
+  font-size: 30px;
+}
+.learn .learn__wrapper .learn__img {
+  display: flex;
+  justify-content: space-around;
+}
+.learn .learn__wrapper .learn__img img:hover {
+  transform: rotate(360deg);
+}
+
+
+.learn .learn__wrapper .learn__img + .learn__img {
+  margin-top: 50px;
 }

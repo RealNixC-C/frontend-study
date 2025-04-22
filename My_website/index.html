@@ -17,46 +17,106 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="inner">
-      <div class="logo">
-        <a href="#">
-          <img src="image/logo.png" alt="로고">
-        </a>
+
+  <div class="root">
+    <header class="header">
+      <nav class="inner">
+        <div class="logo">
+          <a href="#">
+            <img src="image/logo.png" alt="로고">
+          </a>
+        </div>
+        <div class="header-menu">
+          <ul class="menu-list">
+            <li>
+              <a href="#intro">Introduce</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#learn">Skill</a>
+            </li>
+            <li>
+              <a href="#">Project</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="inner">
+        <h1 class="animate__animated animate__zoomIn introduce">
+          Just for myself
+        </h1>
+        <hr class="divider">
+        <h2>
+          안녕하세요 클라우드(AWS)활용
+          <br>
+          자바/스프링 개발 부트캠프 수강생입니다
+        </h2>
       </div>
-      <div class="header-menu">
-        <ul class="menu-list">
-          <li>
-            <a href="#">Introduce</a>
-          </li>
-          <li>
-            <a href="#">Skill</a>
-          </li>
-          <li>
-            <a href="#">Project</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="title">ABOUT</h1>
+      <div class="inner">
+        <div class="flipcard">
+          <div class="card_inner">
+            <div class="card_front first">
+              <img src="image/logo.png" alt="사진">
+              <h2>박요한</h2>
+            </div>
+            <div class="card_back">
+              <h3>
+                ISFJ
+              </h3>
+              <h4>
+                93.03.07
+              </h4>
+              <h4>
+                서울 금천구
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="flipcard">
+          <div class="card_inner">
+            <div class="card_front">
+              백엔드 개발자가 되기 위해 달리는중입니다.
+            </div>
+            <div class="card_back">
+              DO YOUR BEST!
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
-  <div class="background">
-    <div class="inner">
-      <h1 class="animate__animated animate__zoomIn intro">
-        박요한의 개인 홈페이지
-      </h1>
-      <hr class="divider">
-      <h2>
-        안녕하세요 클라우드(AWS)활용
-        <br>
-        자바/스프링 개발 부트캠프 수강생입니다
-      </h2>
-      <h2>
-        백엔드 개발자가 되기 위해 노력중입니다.
-      </h2>
-    </div>
+    </section>
+
+    <section class="learn" id="learn">
+      <div class="inner">
+        <h1 class="title">Learning</h1>
+        <h2>Skills</h2>
+        <div class="learn__wrapper">
+          <div class="learn__img">
+            <img src="image/1.css.png" alt="css">
+            <img src="image/2.html.png" alt="html">
+            <img src="image/3.java_script.png" alt="java script">
+          </div>
+          <div class="learn__img">
+            <img src="image/4.java.png" alt="java">
+            <img src="image/5.jsp.png" alt="jsp">
+            <img src="image/6.nodejs.png" alt="nodejs">
+          </div>
+          <div class="learn__img">
+            <img src="image/7.sql.png" alt="sql">
+            <img src="image/8.git.png" alt="git">
+            <img src="image/9.github.png" alt="github">
+          </div>
+        </div>
+      </div>
+    </section> 
   </div>
 
 </body>
