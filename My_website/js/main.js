@@ -1,14 +1,16 @@
 
 
-const introEl = document.querySelector('#int')
-const aboutEl = document.querySelector('#abt')
-const learnEl = document.querySelector('#lrn')
-const projectEl = document.querySelector('#prj')
+const introEl = document.querySelector('#id-intro')
+const aboutEl = document.querySelector('#id-about')
+const learnEl = document.querySelector('#id-learn')
+const projectEl = document.querySelector('#id-project')
+const contactEl = document.querySelector('#id-contact')
 
 const introliEl = document.querySelector('.menu-list-intro')
 const aboutliEl = document.querySelector('.menu-list-about')
 const learnliEl = document.querySelector('.menu-list-skill')
 const projectliEl = document.querySelector('.menu-list-project')
+const contactliEl = document.querySelector('.menu-list-contact')
 
 introEl.addEventListener('mouseover', function () {
     introliEl.classList.add('mouseover') 
@@ -36,6 +38,13 @@ projectEl.addEventListener('mouseover', function () {
 }) 
 projectEl.addEventListener('mouseout', function () {
   projectliEl.classList.remove('mouseover') 
+})
+
+contactEl.addEventListener('mouseover', function () {
+  contactliEl.classList.add('mouseover') 
+}) 
+contactEl.addEventListener('mouseout', function () {
+  contactliEl.classList.remove('mouseover') 
 }) 
 
 

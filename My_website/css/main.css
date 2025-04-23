@@ -65,7 +65,7 @@ img {
   border: none;
   border-radius: 0 0 0 15px;
 }
-.header .inner .header-menu .menu-list-project.mouseover {
+.header .inner .header-menu .menu-list-contact.mouseover {
   padding: 20px;
   border: none;
   border-radius: 0 0 15px 0;
@@ -98,12 +98,11 @@ img {
 }
 
 .intro .inner .introduce {
-  font-size: 55px;
-  font-style: italic;
+  font-size: 65px;
   font-weight: 500;
 }
 .intro .inner h2 {
-  font-size: 35px;
+  font-size: 40px;
   line-height: 75px;
 }
 .about {
@@ -111,7 +110,6 @@ img {
 }
 .about .inner {
   display: flex;
-  /* height: 350px; */
   justify-content: space-evenly;
   margin: 150px auto 80px;
 }
@@ -126,19 +124,23 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: 1.2s;
+  transition: 1s;
   transform-style: preserve-3d;
 }
 .about .inner .flipcard:hover .card_inner {
-  transform: rotateY(540deg);
+  transform: rotateY(180deg);
   
+}
+.about .inner .flipcard .card_inner .card_back {
+  transform: rotateY(-180deg);
 }
 
 .about .inner .flipcard .card_inner .card_front,
 .about .inner .flipcard .card_inner .card_back {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border: 10px solid #46464b;
+  border-radius: 30px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -150,23 +152,24 @@ img {
   
   z-index: 2;
 }
-.about .inner .flipcard .card_inner .card_back {
-  transform: rotateY(-540deg);
-}
 
 .about .inner .flipcard .card_inner .card_front img {
-  width: 80%;
+  width: 60%;
   display: block;
-  border-radius: 45%;
+  border-radius: 50%;
 }
 .about .inner .flipcard .card_inner .card_front h2 {
   font-size: 30px;
+  text-align: center;
+}
+.about .inner .flipcard .card_inner .card_back {
+  font-size: 35px;
+  text-align: center;
 }
 .learn {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 150px 0; */
   background-color: #b4b7bd;
   padding: 150px 0 150px;
 }
@@ -266,6 +269,12 @@ margin: 0 auto;
   text-align: center;
   margin: 0 auto;
 }
+.contact .inner .contact-info ul li span {
+  position: relative;
+  top: 4px;
+}
+
+
 .contact .inner .contact-info li + li {
   margin-top: 20px;
 }
