@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: "42dot Sans", sans-serif;
   font-size: 20px;
   color: #fff;
 }
@@ -107,6 +108,7 @@ img {
 }
 .about {
   padding: 150px 0 60px;
+  background-color: #c5c5cc;
 }
 .about .inner {
   display: flex;
@@ -129,7 +131,6 @@ img {
 }
 .about .inner .flipcard:hover .card_inner {
   transform: rotateY(180deg);
-  
 }
 .about .inner .flipcard .card_inner .card_back {
   transform: rotateY(-180deg);
@@ -148,7 +149,7 @@ img {
   padding: 20px;
   justify-content: space-evenly;
   backface-visibility: hidden;
-  background-color: #303133;
+  background-color: #1f1f20;
   
   z-index: 2;
 }
@@ -163,37 +164,37 @@ img {
   text-align: center;
 }
 .about .inner .flipcard .card_inner .card_back {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
 }
-.learn {
+.skill {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #b4b7bd;
   padding: 150px 0 150px;
 }
-.learn .inner {
+.skill .inner {
   width: 500px
 }
-.learn .title {
+.skill .title {
   margin-bottom: 50px;
 }
-.learn h2 {
+.skill h2 {
   margin: 80px;
   color: #303133;
   text-align: center;
   font-size: 30px;
 }
-.learn .learn__wrapper .learn__img {
+.skill .skill__wrapper .skill__img {
   display: flex;
   justify-content: space-around;
 }
-.learn .learn__wrapper .learn__img img:hover {
+.skill .skill__wrapper .skill__img img:hover {
   transform: rotate(360deg);
 }
 
-.learn .learn__wrapper .learn__img + .learn__img {
+.skill .skill__wrapper .skill__img + .skill__img {
   margin-top: 50px;
 }
 
@@ -290,9 +291,6 @@ margin: 0 auto;
   right: 0;
 }
 
-
-
-
 .footer {
   background: #272626;
   display: flex;
@@ -300,5 +298,22 @@ margin: 0 auto;
   align-items: center;
 }
 .footer .inner span {
-  line-height: 12;
+  line-height: 10;
+}
+.to-top {
+  width: 35px;
+  height: 35px;
+  background-color: #c5c5cc;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.to-top .inner {
+  width: 100%;
+  height: 100%;
+}
+.to-top .inner a span{
+  line-height: 35px;
 }

@@ -14,6 +14,7 @@ spyEls.forEach(function (spyEl) {
   .addTo(controller); // 컨트롤러에 장면을 할당(필수!) - 라이브러리에서 지정한 문법으로 깊게 이해X
 });
 
+
 // Swiper 사용
 const swiper = new Swiper('.project .swiper', {
   // Optional parameters(슬라이드 옵션 지정)
@@ -101,3 +102,23 @@ window.addEventListener('scroll', function () {
     toTopEl.style.transform = "translateX(100px)";
   }
 })
+
+// 모바일용 메뉴
+const btnHamburger = document.querySelector('.btn-hamburger')
+const navEl = document.querySelector('#header nav')
+const menuItems = document.querySelectorAll('header nav ul li a')
+
+btnHamburger.addEventListener('click', function () {
+  // if (navEl.classList.contains('active')) {
+  //   navEl.classList.remove('active');
+  // } else {
+  //   navEl.classList.add('active');
+  // }
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    navEl.classList.remove('active')
+  })
+});
