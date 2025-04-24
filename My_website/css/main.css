@@ -58,7 +58,7 @@ img {
 }
 .header .inner .header-menu .menu-list li.mouseover {
   padding: 20px;
-  background-color: rgb(236, 214, 88);
+  background-color: rgba(85, 86, 85, 1);
   border: none;
 }
 .header .inner .header-menu .menu-list-intro.mouseover {
@@ -108,7 +108,7 @@ img {
 }
 .about {
   padding: 150px 0 60px;
-  background-color: #c5c5cc;
+  background-color: rgb(198, 202, 202);
 }
 .about .inner {
   display: flex;
@@ -121,13 +121,26 @@ img {
   border: none;
   border-radius: 10px;
   perspective: 1000px;
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: 1s;
 }
+.about .inner .flipcard.second {
+  transform: translateX(600px);
+}
+.about.show .inner .flipcard, 
+.about.show .inner .flipcard.second {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
 .about .inner .flipcard .card_inner {
   width: 100%;
   height: 100%;
   position: relative;
   transition: 1s;
   transform-style: preserve-3d;
+  
 }
 .about .inner .flipcard:hover .card_inner {
   transform: rotateY(180deg);
@@ -135,12 +148,17 @@ img {
 .about .inner .flipcard .card_inner .card_back {
   transform: rotateY(-180deg);
 }
-
+/* .about .inner .flipcard:hover .card_inner {
+  transform: rotateY(180deg);
+}
+.about .inner .flipcard .card_inner .card_back {
+  transform: rotateY(-180deg);
+} */
 .about .inner .flipcard .card_inner .card_front,
 .about .inner .flipcard .card_inner .card_back {
   width: 100%;
   height: 100%;
-  border: 10px solid #46464b;
+  border: 5px solid #6a6a72;
   border-radius: 30px;
   position: absolute;
   display: flex;
@@ -149,12 +167,20 @@ img {
   padding: 20px;
   justify-content: space-evenly;
   backface-visibility: hidden;
-  background-color: #1f1f20;
-  
-  z-index: 2;
+  background-color: #f7f7f7;
+  color: black;
+  padding: 25px;
+  line-height: 1.5;
+  word-break: keep-all;
+  /* z-index: 2; */
 }
 
-.about .inner .flipcard .card_inner .card_front img {
+
+.about .inner .flipcard .card_inner .card_front img:nth-child(1) {
+  width: 60%;
+  display: block;
+}
+.about .inner .flipcard .card_inner .card_front img:nth-child(2) {
   width: 60%;
   display: block;
   border-radius: 50%;
@@ -163,15 +189,20 @@ img {
   font-size: 30px;
   text-align: center;
 }
+.about .inner .flipcard.second .card_inner .card_front h2 {
+  font-size: 24px;
+  text-align: center;
+  /* word-break: keep-all; */
+}
 .about .inner .flipcard .card_inner .card_back {
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
 }
 .skill {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b4b7bd;
+  background-color: rgb(255, 255, 255);
   padding: 150px 0 150px;
 }
 .skill .inner {
@@ -200,7 +231,8 @@ img {
 
 .project {
   padding: 50px 0 100px;
-  color: #272626; /*제거할것*/
+  color: #272626; 
+  background-color: rgb(233, 237, 240)
 }
 .project .inner {
 width: 80%;
@@ -222,7 +254,7 @@ margin: 0 auto;
   margin: 30px 50px;
   padding-bottom: 30px;
   text-align: center;
-  background-color: #bfd5f1;
+  background-color: rgb(198, 214, 233);
   border-radius: 10px;
 }
 .project .inner .wrapper .pj-list img {
@@ -255,6 +287,10 @@ margin: 0 auto;
   border-radius: 10px;
   background-color: #fff;
 }
+.project .inner .wrapper .pj-list .btn:hover {
+  cursor: pointer;
+}
+
 
 .contact {
   color: #000;
