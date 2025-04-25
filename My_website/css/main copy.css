@@ -93,22 +93,16 @@ img {
 .intro {
   height: 100vh;
   width: 100%;
-  /* background-image: url("/My_website/image/background.jpg"); */
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  /* background-size: cover;
+  background-image: url("/My_website/image/background.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 200% 200%;
-  animation: gradientAnimation 4s linear infinite alternate;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .intro .inner {
   width: 800px;
   margin: 0 auto;
+  padding: 200px 45px 0;
   text-align: center;
   color: #fff;
 }
@@ -116,7 +110,7 @@ img {
 .intro .inner .introduce {
   font-size: 65px;
   font-weight: 600;
-  color: #e0de41;
+  color: #191cc2;
 }
 .intro .inner h2 {
   font-size: 40px;
@@ -124,11 +118,7 @@ img {
 }
 .about {
   padding: 150px 0 60px;
-  /* background-color: rgb(198, 202, 202); */
-  /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  background-size: 200% 200%;
-  animation: gradientAnimation_about 3s linear infinite alternate;
+  background-color: rgb(198, 202, 202);
 }
 .about .inner {
   display: flex;
@@ -252,9 +242,7 @@ img {
 .project {
   padding: 50px 0 100px;
   color: #272626; 
-  /* background-color: rgb(233, 237, 240) */
-  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
-  animation: gradientAnimation_project 4s linear infinite alternate;
+  background-color: rgb(233, 237, 240)
 }
 .project .inner {
 width: 80%;
@@ -451,19 +439,6 @@ margin: 0 auto;
   padding: 16px;
 }
 
-
-.animate__bounce {
-  animation-name: bounce;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  /* animation-timing-function: cubic-bezier(.04,1.41,0,1.01); */
-  animation-timing-function: cubic-bezier(0,1.16,0,1.02)
-}
-.intro .inner h2:nth-child(4) {
-  animation-delay: 0.2s;
-}
-
-
 @media screen and (max-width: 767px) {
   .inner {
     width: 80%;
@@ -510,8 +485,8 @@ margin: 0 auto;
 
 
   .intro {
-    /* background-image: none;
-    background-color: #000; */
+    background-image: none;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -556,39 +531,5 @@ margin: 0 auto;
   }
   .contact .inner {
     margin: 200px auto;
-  }
-  .footer {
-    font-size: 15px;
-  }
-  .contact .inner .title {
-    margin: 70px;
-  }
-  .contact .inner .contact-info li img {
-    right: 11px;
-  }
-}
-
-@keyframes gradientAnimation {
-  0% {
-      background-position: 10% 10%;
-  }
-  100% {
-      background-position: 90% 90%;
-  }
-}
-@keyframes gradientAnimation_about {
-  0% {
-    background-position: 10% 10%;
-  }
-100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes gradientAnimation_project {
-  0% {
-      background-position: 10% 10%;
-  }
-  100% {
-      background-position: 90% 90%;
   }
 }

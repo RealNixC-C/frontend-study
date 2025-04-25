@@ -84,11 +84,13 @@ yearEl.textContent = new Date().getFullYear();
 // 페이지 최상단으로 이동
 const toTopEl = document.querySelector("#to-top");
 
+const animateEls = document.querySelectorAll('.visual .animate-flash');
 // 페이지에 스크롤 이벤트 감지를 추가!
 // window: 브라우저 창 객체
+
+
 window.addEventListener('scroll', function () {
   // console.log(window.scrollY); // y축 스크롤 위치
-
   // 페이지 스크롤 위치가
   // 500px 넘으면 요소를 보이고,
   // 500px을 넘지 않으면 요소 숨기기!
@@ -96,11 +98,22 @@ window.addEventListener('scroll', function () {
     // 요소 보이기
     toTopEl.style.opacity = 1;
     toTopEl.style.transform = "translate(0)";
+    
+    // visual 섹션 애니메이션 빼기
+    animateEls.forEach(function (animateEl) {
+      animateEl.classList.remove('animate-flash')
+    });
   } else {
     // 요소 숨기기 (Y축 위치가 500미만일때)
     toTopEl.style.opacity = 0;
     toTopEl.style.transform = "translateX(100px)";
+
+    //visual 섹션 애니메이션 넣기
+    animateEls.forEach(function (animateEl) {
+      animateEl.classList.add('animate-flash')
+    });
   }
+  
 })
 
 // 모바일용 메뉴
