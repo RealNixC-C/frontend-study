@@ -131,7 +131,7 @@ header nav ul li a:hover {
 }
 header nav ul li a::before {
   content: "";
-  display: block;
+  display: block; /* ??? */
   width: 0; /* 초기에는 밑줄이 없도록 0으로 설정 */
   height: 1px;
   background-color: #080ce4;
