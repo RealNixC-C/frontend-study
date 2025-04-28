@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container1 {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn {
+      width: 40px;
+      padding: 3px 10px;
+      font-size: 20px;
+      border-radius: 3px;
+      border: 1px solid #5c5959;
+      display: inline;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <h1>자라나라 스폰지밥</h1>
+    <button type="button" class="btn">+</button>
+    <img src="spongebob.png" alt="사진" class="image">
+</div>
+<hr>
+
+<script>
+  const btnEl = document.querySelector('.btn');
+  const imageEl = document.querySelector('img');
+
+console.log(btnEl);
+console.log(imageEl);
+console.log(imageEl.width);
+
+
+
+btnEl.addEventListener('click', function () {
+  imageEl.width + 100;
+  imageEl.height + 100
+});
+
+</script>
+
+</body>
+</html>
