@@ -75,10 +75,10 @@
     // window.promp('메세지', '기본값'): 입력을 요청하는 대화 상자
     // 확인을 누르면 입력값이, 취소를 누르면 null을 반환
 
-    const addbeadEl = document.querySelector('.add-bead')
-    const oddevenEl = document.querySelector('.oddeven')
-    const resetEl = document.querySelector('.reset')
-    const beadgroupEl = document.querySelector('.bead-group')
+    const addbeadEl = document.querySelector('.add-bead');
+    const oddevenEl = document.querySelector('.oddeven');
+    const resetEl = document.querySelector('.reset');
+    const beadgroupEl = document.querySelector('.bead-group');
     // console.log(addbeadEl,oddevenEl,resetEl);
 
     
@@ -91,42 +91,46 @@
       } else {
         alert('홀수입니다.')
       }
-    })
+    });
     resetEl.addEventListener('click', function () {
       beadgroupEl.innerHTML = ''
-    })
+    });
 
 
     // 간이 계산기
-    const first_valueEl = document.querySelector('#first_value')
-    const second_valueEl = document.querySelector('#second_value')
-    const plusEl = document.querySelector('.btn-plus')
-    const minusEl = document.querySelector('.btn-minus')
-    const timeEl = document.querySelector('.btn-time')
-    const divisionEl = document.querySelector('.btn-division')
-    const restEl = document.querySelector('.btn-rest')
-    const resultEl = document.querySelector('.result')
+    const first_valueEl = document.querySelector('#first_value');
+    const second_valueEl = document.querySelector('#second_value');
+    const plusEl = document.querySelector('.btn-plus');
+    const minusEl = document.querySelector('.btn-minus');
+    const timeEl = document.querySelector('.btn-time');
+    const divisionEl = document.querySelector('.btn-division');
+    const restEl = document.querySelector('.btn-rest');
+    const resultEl = document.querySelector('.result');
     // console.log(first_valueEl, second_valueEl, plusEl, minusEl, timeEl, divisionEl, restEl, resultEl);
     
     plusEl.addEventListener('click', function () {
       resultEl.textContent = Number(first_valueEl.value) + Number(second_valueEl.value);
-      // resultEl.textContent = Number(first_valueEl.value + second_valueEl.value)
-    })
+
+      // resultEl.textContent = Number(first_valueEl.value + second_valueEl.value) // 숫자변환(문자열 + 문자열)
+      // 예) 숫자변환(11 + 11) > 결과값 1111숫자
+      // console.log(typeof Number(first_valueEl.value + second_valueEl.value));
+      
+    });
     minusEl.addEventListener('click', function () {
       resultEl.textContent = first_valueEl.value - second_valueEl.value;
-    })
+    });
 
     timeEl.addEventListener('click', function () {
       resultEl.textContent = first_valueEl.value * second_valueEl.value;
-    })
+    });
 
     divisionEl.addEventListener('click', function () {
       resultEl.textContent = first_valueEl.value / second_valueEl.value;
-    })
+    });
 
     restEl.addEventListener('click', function () {
       resultEl.textContent = first_valueEl.value % second_valueEl.value;
-    })
+    });
   </script>
 </body>
 </html>

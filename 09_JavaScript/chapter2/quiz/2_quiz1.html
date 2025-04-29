@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <input type="number"> -->
+  <input type="number">
 
   <script>
     // 1번 문제
@@ -19,6 +19,15 @@
     document.write(number1, ' ', number2, '<br>');
     let result = number1 + number2;
     document.write(result);
+    
+    // (참고) 입력받은 데이터가 문자인 경우 숫자로 바꿀때
+    // 예: number input
+    // document.querySelector('input[type="number"]').addEventListener('input',
+    //   function () {
+    //     console.log(this.value); // 여기서 this는 'input[type="number"]'를 의미
+    //     console.log(typeof this.value);
+    //   }
+    // );
     
   </script>
 </body>

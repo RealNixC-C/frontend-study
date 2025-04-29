@@ -28,10 +28,10 @@
     <input type="button" value="1번문제" onclick="addMinus();"/>
     <script>
         // 이곳에 코드를 추가하세요
-      function addMinus() {  
+    function addMinus() {  
         const num1El = document.querySelector('#num1');
-        alert('-' + num1El.value)
-      } 
+        alert(-num1El.value)
+    } 
     </script>
     <h2>2. 논리 부정 연산자</h2>
     <h3>
@@ -40,13 +40,14 @@
         <br>alert창에 출력되도록 코드를 추가하세요.
     </h3>
 	<p>Hint. changeBool 함수의 매개변수로 논리형 변수를 사용하세요.</p>
-    <input type="radio" name="bool" id="yes" onclick="">
+    <input type="radio" name="bool" id="yes" onclick="changeBool(true)">
     <label for="yes">참</label>
-    <input type="radio" name="bool" id="no" onclick="">
+    <input type="radio" name="bool" id="no" onclick="changeBool(false)">
     <label for="no">거짓</label>
     <script>
         function changeBool(bool){
             // input type radio의 onclick과 이곳에 코드를 추가하세요.
+            alert(!bool);  
         }
     </script>
     <h2>3. 증감연산자</h2>

@@ -6,8 +6,6 @@
   <title>Document</title>
 
   <style>
-    .container1 {
-    }
     .btn {
       width: 40px;
       padding: 3px 10px;
@@ -67,6 +65,10 @@
 btnEl.addEventListener('click', function () {
   imageEl.width = imageEl.width + 100;
   imageEl.height = imageEl.height + 100;
+
+  // 방법2
+  // logo.style.width = `${imgWidth + 100}px`;
+  // logo.style.height = `${imgHeight + 100}px`;
 });
 
 // 2번문제
@@ -79,6 +81,10 @@ const imageEl2 = document.querySelector('.image2')
 btnChange.addEventListener('click', function () {
   imageEl2.width = pic_widthEl.value;
   imageEl2.height = pic_heightEl.value;
+
+  // 방법2
+  // logo.style.width = `${widthInput.value}px`;
+  // logo.style.height = `${heightInput.value}px`;
 });
 
 
