@@ -91,19 +91,17 @@
     // } else if (month >= 9 && month <= 11) { // 9~113
     //   document.write('독서의 계절 가을이네요!!')
     // // } else if (month === 1 || month === 2 || month === 12) { // 범위값이 늘어나면 추가 지정해야하는 번거로움이있음
-    // // } else if (month === 1 || month >= 1 && month <= 2) { 
+    // // } else if (month === 12 || month >= 1 && month <= 2) { 
     // //   document.write('눈이 오는 겨울이네요!!')
     // } else if (month >= 1 && month <= 2 || month === 12) { // 나머지 입력
     //   document.write('눈이 오는 겨울이네요!!')
-    // } else {252
-    //   document.write('???')
     // }
     // Quiz: 명확히 하려면 else if문을 사용하여 12, 1~2를 체크하는 조건식 넣기
 
     // 조건식에 논리형 데이터가 아닌 다른 타입의 데이터가 입력됐을 때 실행이된다면 true라는듯
     // false, 0, undifined, null, NaN, ''는 false값, 그 밖의 값은 true
     if ('a') {
-      document.write('true로 취급<br>')
+      document.write('true로 취급<br>') // 빈문자열이 아닌 무엇가 값이 들어간 문자열이면 true
     }
 
     // (응용) 정상적인 값이 들어왔는지 판단
@@ -178,7 +176,7 @@
     // }
 
     // if (url) {
-    //   location.href = 'https://' + url; // 브라우저 주소창의 href(주소값)을 변경하겠다 // url 정보가 바뀌면서 이동
+    //   location.href = 'https://' + url; // location(브라우저 주소창)의 href(주소값)을 변경하겠다 // url 정보가 바뀌면서 이동
     // }
 
     // 2) break문이 없을 때
