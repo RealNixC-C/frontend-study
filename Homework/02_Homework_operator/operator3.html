@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #longtext {
+      resize: none;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>문자 누적하기</h1>
+  <div>
+    <label for="userText"></label>
+    <input type="text" id="userText" value="동해물과">
+    <button type="button" class="accumulate">누적</button>
+  </div>
+  <textarea id="longtext" cols="28" rows="5">동해물과</textarea>
+
+  <script>
+    const userTextEl = document.querySelector('#userText');
+    const accumulatebtn = document.querySelector('.accumulate');
+    const longtextEl = document.querySelector('#longtext');
+    // console.log(userTextEl, accumulatebtn, longtextEl);
+
+    accumulatebtn.addEventListener('click', function () {
+      longtextEl.textContent = `${longtextEl.textContent}${userTextEl.value}`
+      userTextEl.value = ''
+    })
+    
+  </script>
+</body>
+</html>
