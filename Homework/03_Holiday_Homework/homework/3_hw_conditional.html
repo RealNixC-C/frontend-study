@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #charImg {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid yellowgreen;
+    }
+</style>
+</head>
+<body>
+  <!-- 1번 -->
+  <h1>날씨 확인</h1>
+  계절
+  <input type="radio" name="season" id="spring" value="봄">
+  <label for="spring">봄</label>
+  <input type="radio" name="season" id="summer" value="여름">
+  <label for="summer">여름</label>
+  <input type="radio" name="season" id="fall" value="가을">
+  <label for="fall">가을</label>
+  <input type="radio" name="season" id="winter" value="겨울">
+  <label for="winter">겨울</label>
+  <div>
+    <label for="temp">기온</label>
+    <input type="number" id="temp">
+  </div>
+  <button type="button" onclick="checkSeason()">확인</button>
+
+  <script>
+    // 1번
+    const radioSpring = document.querySelector('#spring');
+    const radioSummer = document.querySelector('#summer');
+    const radioFall = document.querySelector('#fall');
+    const radioWinter = document.querySelector('#winter');
+    const tempValue = document.querySelector('#temp');
+    // console.log(radioSpring, radioSummer, radioFall, radioWinter);
+    
+
+      
+    function checkSeason() {
+      if (radioSpring.checked) {
+        alert(`봄: ${tempValue.value}도 입니다.`);
+      }
+      if (radioSummer.checked) {
+        if (tempValue.value >= 35) {
+          alert(`여름: ${tempValue.value}도 입니다. 폭염경보!!!`);
+        } else if (tempValue.value >= 33){
+          alert(`여름: ${tempValue.value}도 입니다. 폭염주의보!`);
+        } else {
+          alert(`여름: ${tempValue.value}도 입니다.`);
+        }
+      }
+      if (radioFall.checked) {
+        alert(`가을: ${tempValue.value}도 입니다.`);
+      }
+      if (radioWinter.checked) {
+        if (tempValue.value <= -15) {
+          alert(`겨울: ${tempValue.value}도 입니다. 한파경보!!!`);
+        } else if (tempValue.value <= -12) {
+          alert(`겨울: ${tempValue.value}도 입니다. 한파주의보!`);
+        } else {
+          alert(`겨울: ${tempValue.value}도 입니다.`);
+        }
+      }
+
+
+      
+          // function checkSeason() {
+    //   if (radioSpring.checked) {
+    //     alert(`봄: ${tempValue.value}도 입니다.`);
+    //   } else if (radioSummer.checked) {
+    //     if (tempValue.value >= 35) {
+    //       alert(`여름: ${tempValue.value}도 입니다. 폭염경보!!!`);
+    //     } else if (tempValue.value >= 33){
+    //       alert(`여름: ${tempValue.value}도 입니다. 폭염주의보!`);
+    //     } else {
+    //       alert(`여름: ${tempValue.value}도 입니다.`);
+    //     }
+    //   } else if (radioFall.checked) {
+    //     alert(`가을: ${tempValue.value}도 입니다.`);
+    //   } else if (radioWinter.checked) {
+    //     if (tempValue.value <= -15) {
+    //       alert(`겨울: ${tempValue.value}도 입니다. 한파경보!!!`);
+    //     } else if (tempValue.value <= -12) {
+    //       alert(`겨울: ${tempValue.value}도 입니다. 한파주의보!`);
+    //     } else {
+    //       alert(`겨울: ${tempValue.value}도 입니다.`);
+    //     }
+    //   }
+    }
+
+  </script>
+
+  <!-- 2번 -->
+  <h1>스폰지밥, 뚱이, 징징이</h1>
+  <select id="charSelect" onchange="changeCharacter()">
+    <option value="1" selected>스폰지밥</option>
+    <option value="2">뚱이</option>
+    <option value="3">징징이</option>
+  </select>
+  <img src="images/sponge.png" alt="캐릭터" id="charImg">
+
+  <script>
+    // 2번
+    const imgChange = document.querySelector('#charImg');
+    const selectChar = document.querySelector('#charSelect');
+
+    // function changeCharacter() {
+    //   if (selectChar.value === "1") {
+    //     imgChange.src = "images/sponge.png"
+    //   }
+    //   if (selectChar.value === "2") {
+    //     imgChange.src = "images/dung.png"
+    //   }
+    //   if (selectChar.value === "3") {
+    //     imgChange.src = "images/human.png"
+    //   }
+    //   console.log(selectChar.value);
+    // }
+    // 코드는 완성했지만 마지막의 value값의 차이로 아쉽게 실패
+    // 오답노트 : select의 value값은 string으로 들어오지만 본인은 
+    // if문의 조건식으로(selectChar.value === 1) 를 사용하였기에
+    // 숫자와 문자는 === 연산자를 사용할경우 타입이 달라서 false값을 가짐
+    
+    // 또 다른 팁으로 조건식에 === 연산자만 사용 될 경우 switch문을 꼭 활용할것
+    function changeCharacter() {  
+      switch (selectChar.value) {
+        case "1":
+          imgChange.src = "images/sponge.png"
+          break;
+        case "2":
+          imgChange.src = "images/dung.png"
+          break;
+        case "3":
+          imgChange.src = "images/human.png"
+          break;
+      
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
