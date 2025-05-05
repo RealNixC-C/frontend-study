@@ -11,14 +11,31 @@
   <h1>콤보세트</h1>
   <label for="setCnt">개수: </label>
   <input type="number" id="setCnt">
-  <button type="button" class="btn-order">주문</button>
+  <button type="button" class="btn-order" onclick="order()">주문</button>
   <div class="combo-list">
+    <!-- <img src="images/popcorn.png" alt="팝콘">
+    <img src="images/coke.png" alt="콜라1">
+    <img src="images/coke.png" alt="콜라2"> -->
     <!-- 콤보 세트 이미지가 들어갈 자리 -->
   </div>
 
   <script>
     // 1번
+    const inputSetCnt = document.querySelector('#setCnt');
+    const orderBtn = document.querySelector('.btn-order');
+    const comboListEl = document.querySelector('.combo-list');
+
     
+    function order() {
+      // console.log(typeof inputSetCnt.value);
+      // setNum = Number(inputSetCnt.value)
+      // console.log(setNum);
+      comboListEl.innerHTML = '';
+      
+      for (let i = 1; i <= Number(inputSetCnt.value); i++) {
+        comboListEl.innerHTML = comboListEl.innerHTML + '<img src="images/popcorn.png" alt="팝콘"><img src="images/coke.png" alt="콜라1"><img src="images/coke.png" alt="콜라2"><br>'
+      }
+    }
   </script>
 
   <!-- 2번 -->
@@ -30,8 +47,62 @@
 
   <script>
     // 2번
+    // const tableareaEl = document.querySelector('.table-area');
+    // let count = 1;
     
+    // function createTable() {
+    //   const tableTr = Number(prompt('테이블 행의 갯수는?'));
+    //   const tableTd = Number(prompt('테이블 열의 갯수는?'));
+
+    //   tableareaEl.innerHTML = '<table border="1">';
+    //   for (let i = 1; i <= tableTr; i++) {
+    //     tableareaEl.innerHTML = tableareaEl.innerHTML + '<tr>';
+    //       for (let j = 1; j <= tableTd; j++) {
+    //         tableareaEl.innerHTML = tableareaEl.innerHTML + `<td>${count}</td>`;
+    //         count++;
+    //       }
+    //       tableareaEl.innerHTML = tableareaEl.innerHTML + '</tr>';
+    //   }
+    //   tableareaEl.innerHTML = tableareaEl.innerHTML + '</table>';
+    // }
+    
+
+    
+    const tableareaEl = document.querySelector('.table-area');
+    function createTable() {
+      const tableTr = Number(prompt('테이블 행의 갯수는?'));
+      const tableTd = Number(prompt('테이블 열의 갯수는?'));
+      let count = 1;
+      let html = '<table border="1">';
+
+      for (let i = 1; i <= tableTr; i++) {
+        html = html + '<tr>';
+        for (let j = 1; j <= tableTd; j++) {
+          html = html +  `<td>${count}</td>`;
+          count++;
+        }
+        html = html + '</tr>';
+      }
+      html = html + '</table>';
+      tableareaEl.innerHTML = html;
+    }
+    // 문법 오류가 아닌 “DOM 조작 방식의 비효율성과 충돌” 문제
+    // 누적 innerHTML 사용시 그 요소 안의 모든 자식 DOM 요소가 삭제되고 새로 생성됨
+    // HTML 파서가 처리 도중에 닫히지 않은 <table>이나 <tr> 태그를 반복해서 덮어쓰면,
+    // 브라우저는 내부적으로 "잘못된 HTML 구조"로 판단하고 
+    // 렌더링을 무시하거나 자동 수정을 시도
+
+    // 첫 번째 식이 안되는 이유.
+    // 1. <tr>이 <div> 안에 있다고 판단 → 브라우저가 무시함
+    // 2. <table>이 매번 지워졌다 새로 생겨서 누적되지 않음
+    // 3. 브라우저가 테이블 렌더링을 포기함 (그래서 안 보이는 것처럼 됨)
+
+    // 두 번째 식이 되는 이유.
+    // 실제 DOM을 건드리지 않고 변수에만 문자열을 누적
+    // 마지막에 한 번만 innerHTML로 삽입하므로
+    // 구조도 안정적이고 성능도 훨씬 좋음
   </script>
+
 
   <!-- 3번 -->
   <h1>귤농장</h1>
@@ -39,10 +110,22 @@
   <div class="basket" style="display: flex; flex-wrap: wrap;">
     <!-- 귤이 들어갈 자리 -->
   </div>
-
   <script>
+    // <div><div>귤 10g</div><img src="images/gyul.png" alt="귤"></div>
     // 3번
-    
+    let basketEl = document.querySelector('.basket');
+
+    function getOrange() {
+      let totalorg = '';
+      const howMany = Number(prompt('몇g 체험하시겠어요? (최대: 200g)'));
+      for (let i = 10; i <= howMany; i = i + 10) {
+        if (i > 200) {
+          break;
+        }
+        totalorg = totalorg + `<div style="margin: 10px"><div>귤 ${i}g</div><img src="images/gyul.png" alt="귤"></div>`
+      }
+      basketEl.innerHTML = totalorg;
+    }
   </script>
 </body>
 </html>

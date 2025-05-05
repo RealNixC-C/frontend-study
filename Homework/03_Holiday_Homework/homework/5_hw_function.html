@@ -23,7 +23,16 @@
 
   <script>
     // 1번
+    const imageRadius = document.querySelector('.img-sponge');
+    const valueOfRange = document.querySelector('#rangeValue');
     
+    
+    function radiusAdd(round) {
+      imageRadius.style.borderRadius = `${round}px`
+      valueOfRange.textContent = Number(round);
+      // console.log(valueOfRange.textContent);
+      
+    }
   </script>
 </body>
 </html>
