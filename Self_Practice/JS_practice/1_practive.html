@@ -22,36 +22,18 @@
     // })
     // document.write(arr1);
 
-    const persons = [
-      {
-        name: '유재석',
-        point: 78,
-        city: '서울',
-      },
-      {
-        name: '김종국',
-        point: 92,
-        city: '서울',
-      },
-      {
-        name: '양세찬',
-        point: 76,
-        city: '제주',
-      },
-      {
-        name: '하하',
-        point: 81,
-        city: '서울',
-      },
-    ];
-
-    // Quiz 객체내 point를 활용하여 오름차순으로 정리하기.
-
-    persons.sort(function(a, b) {
-      return b.point - a.point;
-    }) 
-    console.log(persons);
+    const randomNum = Math.floor(Math.random() * (150 - 100 + 1)) + 100;
+    document.write(randomNum, '<br>');
     
+    const arr1 = [1, 65 ,262, 73, 12, 78]
+    arr1.sort(function(a, b){
+      return a - b;
+    })
+    document.write(arr1, '<br>')
+
+    const maxNum = Math.min(...arr1);
+    document.write(maxNum, '<br>'); 
+
   </script>
 </body>
 </html>
