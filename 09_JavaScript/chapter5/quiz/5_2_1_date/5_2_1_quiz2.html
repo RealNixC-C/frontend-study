@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 문제2
+    // 요일 보여주기
+
+    // 특정 날짜 객체를 생성하면 'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT' 형식으로 요일을 보여주도록 만들어보세요.
+    // 2가지 방법으로 각각 구현해 볼 것!
+    // 1) 조건문(if 또는 switch)을 이용한 방법
+    // 2) 배열을 이용한 방법
+
+    // 예시:
+    // let date = new Date(2023, 0, 5); // 2023년 1월 5일
+    // "THU"가 출력되어야 합니다.
+
+    // 풀이2-1
+    let date = new Date(2023, 0, 5);
+    // let date = new Date();
+    document.write(date, '<br>');
+    // const dateDay = date.getDay();
+    
+    switch (date.getDay()) {
+      case 0:
+        document.write('SUN<br>')
+        break;
+      case 1:
+        document.write('MON<br>')
+        break;
+      case 2:
+        document.write('TUE<br>')
+        break;
+      case 3:
+        document.write('WED<br>')
+        break;
+      case 4:
+        document.write('THU<br>')
+        break;
+      case 5:
+        document.write('FRI<br>')
+        break;
+      case 6:
+          
+        break;
+      default:
+        break;
+    }
+
+    if (date.getDay() === 0) {
+      document.write('SUN')
+    } else if (date.getDay() === 1) {
+      document.write('MON')
+    } else if (date.getDay() === 2) {
+      document.write('TUE')
+    } else if (date.getDay() === 3) {
+      document.write('WED')
+    } else if (date.getDay() === 4) {
+      document.write('THU')
+    } else if (date.getDay() === 5) {
+      document.write('FRI')
+    } else {
+      document.write('SAT')
+    }
+    // 풀이2-2
+    // 배열을 활용한 접근
+    const whatDay = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI']
+    document.write(whatDay[date.getDay()]);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

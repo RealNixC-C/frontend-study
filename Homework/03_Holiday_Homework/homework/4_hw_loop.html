@@ -73,18 +73,18 @@
       const tableTr = Number(prompt('테이블 행의 갯수는?'));
       const tableTd = Number(prompt('테이블 열의 갯수는?'));
       let count = 1;
-      let html = '<table border="1">';
+      let makeTable = '<table border="1">';
 
       for (let i = 1; i <= tableTr; i++) {
-        html = html + '<tr>';
+        makeTable = makeTable + '<tr>';
         for (let j = 1; j <= tableTd; j++) {
-          html = html +  `<td>${count}</td>`;
+          makeTable = makeTable +  `<td>${count}</td>`;
           count++;
         }
-        html = html + '</tr>';
+        makeTable = makeTable + '</tr>';
       }
-      html = html + '</table>';
-      tableareaEl.innerHTML = html;
+      makeTable = makeTable + '</table>';
+      tableareaEl.innerHTML = makeTable;
     }
     // 문법 오류가 아닌 “DOM 조작 방식의 비효율성과 충돌” 문제
     // 누적 innerHTML 사용시 그 요소 안의 모든 자식 DOM 요소가 삭제되고 새로 생성됨
