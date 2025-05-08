@@ -7,33 +7,25 @@
 </head>
 <body>
   <script>
-    // const num = Math.floor(Math.random() * 101);
-    // document.write(num, '<br>');
+    // 문제3
+    // 먹기 싫은 과일을 입력받은 다음 과일을 담은 배열에서 찾아 제거하고 콘솔에 출력해보세요.
+    // 입력한 과일이 배열에 없을 경우 '제거할 과일이 없습니다.' 라고 alert창을 띄운다.
 
-    // const arr = ['ㄷ', 'ㄴ', 'ㄹ', 'ㅎ', 'ㄱ']
-    // arr.sort();
-    // document.write(arr, '<br>');
+    const fruits = ['사과', '바나나', '딸기', '포도', '두리안', '파인애플'];
+    const disliked = prompt('싫어하는 과일은?');
     
-    // //sorting number
-    // const arr1 = [72, 45, 82, 60, 49, 6]
-
-    // arr1.sort(function(a, b){
-    //   return a - b;
-    // })
-    // document.write(arr1);
-
-    const randomNum = Math.floor(Math.random() * (150 - 100 + 1)) + 100;
-    document.write(randomNum, '<br>');
+    // 풀이3
+    const dislikedfruit = fruits.indexOf(disliked);
+    console.log(dislikedfruit); // 4
     
-    const arr1 = [1, 65 ,262, 73, 12, 78]
-    arr1.sort(function(a, b){
-      return a - b;
-    })
-    document.write(arr1, '<br>')
+    if (dislikedfruit === -1) {
+      alert('제거할 과일이 없습니다.');
+    } else {
+      fruits.splice(fruits, 1);
+    }
 
-    const maxNum = Math.min(...arr1);
-    document.write(maxNum, '<br>'); 
-
+    console.log(fruits);
+    
   </script>
 </body>
 </html>

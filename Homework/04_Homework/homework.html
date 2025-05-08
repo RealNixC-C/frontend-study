@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1번문제 -->
+  <div>
+    <label for="start">시작</label>
+    <input type="text" id="start">
+  </div>
+  <div>
+    <label for="end">종료</label>
+    <input type="text" id="end">
+  </div>
+  <button type="button" onclick="Show()">실행</button>
+  <hr>
+  <script>
+    const inputStart = document.querySelector('#start')
+    const inputEnd = document.querySelector('#end')
+
+    const startNum = inputStart.value;
+    const endNum = inputEnd.value;
+    let aRR = [];
+    
+    function Show() {
+      for (let i = 0; i < 10; i++) {
+        const ranNum = Math.floor(Math.random() * inputEnd.value - inputStart + 1 ) + inputStart;
+        console.log(ranNum);
+        
+        // aRR.push(ranNum);
+        // console.log(aRR);
+        
+      }
+    }
+    // console.log(aRR);
+  </script>
+
+  <!-- 4번문제 -->
+  <button type="button" onclick="backColor()">바꾸기</button>
+  <script>
+    const bodyEl = document.querySelector('body')
+    
+    function backColor() { 
+      const color1 = Math.floor(Math.random() * 256);
+      const color2 = Math.floor(Math.random() * 256);
+      const color3 = Math.floor(Math.random() * 256);
+      // console.log(color1, color2, color3);
+      bodyEl.style.backgroundColor = `rgb(${color1}, ${color2}, ${color3})`
+    }
+  </script>
+</body>
+</html>

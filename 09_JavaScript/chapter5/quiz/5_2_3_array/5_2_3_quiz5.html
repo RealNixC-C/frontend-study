@@ -16,13 +16,18 @@
     const arr = [];
 
     // 풀이5
-    for (let i = 1; i <= arrLength; i++) {
-      arr.push(prompt('좋아하는 동물을 입력하세요.', ''));
+    for (let i = 0; i < arrLength; i++) {
+      arr.push(prompt('숫자를 입력하세요.', ''));
+      // arr[i] = (prompt('숫자를 입력하세요.', ''));
       // console.log(arr);
     }
-    console.log(arr);
-    document.write(arr.pop(), '<br>');
-    document.write(arr.shift(), '<br>');
+    // document.write(arr[0], '<br>');
+    // document.write(arr[arr.length - 1], '<br>');
+    // console.log(arr);
+    if (arr.length > 0) {
+      document.write(arr.shift(), '<br>');
+      document.write(arr.pop(), '<br>');
+    }
     
   </script>
 </head>

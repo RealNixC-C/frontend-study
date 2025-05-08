@@ -17,17 +17,28 @@
     // 풀이6
     // Math.floor(Math.random() * 45) + 1; // 번호생성
 
-    let i = lottoArr.length;
-    while (i < 6) {
+    lottoArr.length;
+    while (lottoArr.length < 6) {
       let randomNum = Math.floor(Math.random() * 45) + 1; 
       if (lottoArr.includes(randomNum)) {
         continue;
+      } else {
+        lottoArr.push(randomNum)
       }
-      lottoArr.push(randomNum)
-      console.log(lottoArr.includes(randomNum));
-      i++;
     }
-    console.log(lottoArr);
+    lottoArr.sort(function (a, b) {
+      return a - b;
+    })
+    document.write(lottoArr);
+
+    // 다른 풀이
+    // while (lottoArr.length < 6) {
+    //   let randomNum = Math.floor(Math.random() * 45) + 1; 
+    //   if (!lottoArr.includes(randomNum)) {
+    //     lottoArr.push(randomNum)
+    //   }
+    // }
+    // document.write(lottoArr);
   </script>
 </head>
 <body>
