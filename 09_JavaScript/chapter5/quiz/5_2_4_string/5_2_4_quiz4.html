@@ -32,20 +32,53 @@
       // 풀이4
       const fileName = fileInput.files[0].name;
       console.log(fileName);
-      const lastIndex = fileName.lastIndexOf('.');
-      console.log(lastIndex);
-      const confirm = fileName.slice(lastIndex + 1);
-      console.log(confirm);
-
-
-      // for (let i = 0; i < imgFileExt.length; i++) {
-      //   if (confirm){
-      //     alert('잘못된 파일입니다.');
-      //     break;
-      //   }
-      // // }
-      // }
+      const fileIndex = Number(fileName.lastIndexOf('.')) + 1;
+      console.log(fileIndex);
+      const fileExt = fileName.slice(fileIndex)
+      console.log(fileExt);
       
+      if (!fileExt === 'jpg' || !fileExt === 'png' || !fileExt === 'gif') {
+        alert('이미지 파일이 아닙니다.');
+        this.value = '';
+      }
+      
+
+
+      // if (!fileExt === 'jpg' || !fileExt === 'png' || !fileExt === 'gif') {
+      //   alert('이미지 파일이 아닙니다.');
+      // }
+      // if (!(fileExt === 'jpg' || fileExt === 'png' || fileExt === 'gif')) {
+      //   alert('이미지 파일이 아닙니다!');
+      //   this.value = ''; // 파일 선택 초기화
+      // }
+      // 위 조건문의 차이.
+      // 첫 번째 if문의 조건식에 !fileExt부분은 논리 부정연산자 즉 true/false값을 지니게 됨
+      // truthy와 falsy값은 문자열과 비교할 수 없음
+      // fileExt의 값으로는 "jpg","png","gif" 같은 확장자명 문자열이므로
+      // !truthy(false)의 값을 지님 즉 항상 false값을 갖고있기에 잘못된 식
+
+      // 두 번째 식
+      // !논리부정연산자 뒤에있는 괄호 ()식을 논리연산자 === || 를 통해 비교후
+      // || 이기때문에 하나의 조건식이라도 만족하게 될 경우 true값을 반환 
+      // 이후 부정연산자를 통해 true값 혹은 false값을 반대로 바꿈
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       // 풀이4 (선생님 풀이)
       // 하드 코딩 = 관리 불편
       // if (!(fileExt === 'jpg' || 
