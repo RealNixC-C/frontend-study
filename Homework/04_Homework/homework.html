@@ -24,15 +24,18 @@
 
     const startNum = inputStart.value;
     const endNum = inputEnd.value;
+
+    const bigNum = Number(inputEnd.value);
+    const smallNum = Number(inputStart.value);
     let aRR = [];
     
     function Show() {
       for (let i = 0; i < 10; i++) {
-        const ranNum = Math.floor(Math.random() * inputEnd.value - inputStart + 1 ) + inputStart;
+        const ranNum = Math.floor(Math.random() * (bigNum - smallNum + 1 )) + smallNum;
         console.log(ranNum);
         
-        // aRR.push(ranNum);
-        // console.log(aRR);
+        aRR.push(ranNum);
+        console.log(aRR);
         
       }
     }
