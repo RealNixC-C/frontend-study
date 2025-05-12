@@ -19,27 +19,13 @@
   <button type="button" onclick="Show()">실행</button>
   <hr>
   <script>
-    const inputStart = document.querySelector('#start')
-    const inputEnd = document.querySelector('#end')
-
-    const startNum = inputStart.value;
-    const endNum = inputEnd.value;
-
-    const bigNum = Number(inputEnd.value);
-    const smallNum = Number(inputStart.value);
     let aRR = [];
+    const inputStart = document.querySelector('#start');
+    const inputEnd = document.querySelector('#end');
+    const btnRun = document.querySelector('button')
+    console.log(btnRun);
     
-    function Show() {
-      for (let i = 0; i < 10; i++) {
-        const ranNum = Math.floor(Math.random() * (bigNum - smallNum + 1 )) + smallNum;
-        console.log(ranNum);
-        
-        aRR.push(ranNum);
-        console.log(aRR);
-        
-      }
-    }
-    // console.log(aRR);
+
   </script>
 
   <!-- 4번문제 -->
