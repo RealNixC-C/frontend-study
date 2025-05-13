@@ -43,6 +43,8 @@
       alert(sortedaRR);
     }
   </script>
+
+
   <!-- 2번 문제 -->
   <h1>Math 객체 연습</h1>
   <p id="floor">Floor: 7.8</p>
@@ -60,8 +62,27 @@
     const ceilEl = document.querySelector('#ceil');
     const absEl = document.querySelector('#abs');
     const powEl = document.querySelector('#pow');
+    const pTags = document.querySelectorAll('p')
+    
+    
 
+    function applyMathFunctions() {
+      pTags.forEach(function (ptag) {
+        const cntNum = ptag.textContent.split(':')[1].trim();
+        const mathMethod = ptag.textContent.split(':')[0].trim();
 
+        switch (mathMethod) {
+          case 'Floor':
+            return Math.floor()
+            break;
+        
+          default:
+            break;
+        }
+        
+      })
+    }
+    
 
   </script>
 
